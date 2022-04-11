@@ -1,0 +1,7 @@
+CSS precedence follows the following rule:
+- !important
+- inline
+- internal (in the head)
+- external
+- more specific selectors take precedence over less specific
+- rules that appears later overrides earlier rules if equal specificity

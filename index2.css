@@ -1,0 +1,31 @@
+/* selector */
+img {
+    width: 150px;
+    height: 150px;
+}
+
+body {
+    color: blueviolet;
+    background-color:beige;
+}
+
+.testDivs {
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+#div1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#div2 {
+    /* position: absolute;
+    right: 0px; */
+    float: right;
+
+}
