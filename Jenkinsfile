@@ -1,15 +1,20 @@
 pipeline{
         agent any
         stages{
-            stage('Make Directory'){
+            stage('Clone repo'){
                 steps{
-                    sh "mkdir ~/jenkins-tutorial-test"
+                    git branch: '*/main', url: 'https://github.com/jordbick/scriptrepo.git'
                 }
             }
-            stage('Make Files'){
+            stage('Run script'){
                 steps{
-                    sh "touch ~/jenkins-tutorial-test/file1 ~/jenkins-tutorial-test/file2"
+                    sh myscript.sh
                 }
             }
+            stage('Archive file'){
+                steps{
+                    archiveArtifact artifacts: 'output'
+                        }
+                }
         }
 }
