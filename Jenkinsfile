@@ -13,7 +13,7 @@ pipeline{
             }
             stage('Archive'){
                 steps{
-                   archiveArtifact artifacts: 'output', followSymlinks: false
+                   archiveArtifacts artifacts: 'output', followSymlinks: false
                         }
                 }
         }
