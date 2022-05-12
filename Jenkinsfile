@@ -9,7 +9,6 @@ pipeline{
             stage('Run script'){
                 steps{
                     sh 'sh ./myscript.sh'
-sh './myscript'
                 }
             }
             stage('Archive file'){
