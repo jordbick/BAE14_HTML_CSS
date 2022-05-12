@@ -11,9 +11,9 @@ pipeline{
                     sh 'sh ./myscript.sh'
                 }
             }
-            stage('Archive file'){
+            stage('Archive'){
                 steps{
-                    archive artifacts: 'output'
+                   archiveArtifact artifacts: 'output', followSymlinks: false
                         }
                 }
         }
