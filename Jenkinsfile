@@ -13,7 +13,7 @@ pipeline{
             }
             stage('Archive file'){
                 steps{
-                    archiveArtifact artifacts: 'output'
+                    archive artifacts: 'output'
                         }
                 }
         }
